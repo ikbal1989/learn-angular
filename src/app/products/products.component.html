@@ -1,0 +1,15 @@
+<ul class="list-group">
+  <li *ngFor="let product of products" class="list-group-item">
+    {{ product.name }} <a>More ... </a>
+  </li>
+</ul>
+
+<nav *ngIf="total" aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+
+    <li *ngFor="let i=0; i<last_page; i++" class="page-item"><a class="page-link" href="#">{{ i }}</a></li>
+
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav>

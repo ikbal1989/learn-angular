@@ -1,0 +1,23 @@
+<div class="col-sm-6 offset-3">
+  <div class="card bg-light">
+    <div class="card-title">
+      <h2 class="text-center">Login JWT(Json web token)</h2>
+    </div>
+    <div class="card-body">
+      <div *ngIf="invalidLogin" class="alert alert-danfer">
+        Invalid username and/or password.
+      </div>
+      <form #f="ngForm" (ngSubmit)="signIn(f)">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" ngModel name="email" id="email"  class="form-control" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" ngModel name="password" class="form-control" id="password"  placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

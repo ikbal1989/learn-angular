@@ -1,0 +1,8 @@
+<input (keyup.enter)="createPost(post)" #post type="text" id="title" name="title" class="form-control">
+<ul class="list-group">
+  <li *ngFor="let post of posts" class="list-group-item">
+    <button (click)="updatePost(post)" class="btn btn-success btn-sm">Update</button>
+    <button (click)="removePost(post)" class="btn btn-danger btn-sm">Remove</button>
+    {{ post.title }} <a [routerLink]="['/post', post.id,post.title]">More ... </a>
+  </li>
+</ul>
